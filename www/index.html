@@ -51,6 +51,8 @@
         janken(hand_pa);
       }
 
+    
+
       function janken(player_hand){
         // コンピュータの手を決定
         comp_hand = Math.floor(Math.random() * 3);
@@ -86,7 +88,7 @@
         $(".hand").css("display", "inline");
         // ニューゲームボタン非表示
         $("#newgame").css("display", "none");
-        $("#result").html("じゃんけん・・・ぽん")
+        $("#result").html("何連勝できるかな? <br> さいしょはグー・・・じゃんけんぽん！")
         $("#result2").html("");
       }
 
@@ -107,7 +109,7 @@
           db = new JankenScore();
           db.set(key, win_num).save();
 
-          msg += win_num +  "連勝でした。<br>";
+          msg +="ざんねん！"+ win_num +  "連勝でした。<br>";
         } else {
           msg += "1回も勝てませんでした。<br>次は頑張ろう";
         }
